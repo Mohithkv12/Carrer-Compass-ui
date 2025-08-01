@@ -5,7 +5,7 @@ import LoadingSpinner from "../components/LoadingSpinner";
 import RoadmapSection from "../components/RoadmapSection";
 import CourseCard from "../components/CourseCard";
 import ErrorModal from "../components/ErrorModal";
-import compassHero from "../assets/compass-hero.jpg";
+import careerHero from "../assets/career-growth-hero.jpg";
 
 const Index = () => {
   const [topic, setTopic] = useState("");
@@ -91,7 +91,7 @@ const Index = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-accent/5 py-20">
+      <section className="relative overflow-hidden py-20" style={{ background: 'var(--gradient-mesh)' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
@@ -139,8 +139,8 @@ const Index = () => {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-elegant)]">
                 <img 
-                  src={compassHero}
-                  alt="Career guidance compass illustration"
+                  src={careerHero}
+                  alt="Professional career development and learning journey"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -162,7 +162,7 @@ const Index = () => {
           </div>
 
           {/* Input Form */}
-          <div className="bg-card rounded-2xl p-8 shadow-[var(--shadow-card)] border border-border/50 max-w-2xl mx-auto">
+          <div className="bg-card rounded-2xl p-8 shadow-[var(--shadow-float)] border border-border/50 max-w-2xl mx-auto backdrop-blur-sm">
             <div className="space-y-6">
               {/* Topic Input */}
               <div className="relative">
@@ -212,7 +212,7 @@ const Index = () => {
               <button
                 onClick={handleGenerateRoadmap}
                 disabled={loading}
-                className="w-full bg-primary hover:bg-primary-glow disabled:opacity-50 disabled:cursor-not-allowed text-primary-foreground font-bold py-4 px-8 rounded-xl transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transform"
+                className="w-full bg-gradient-to-r from-primary to-accent hover:from-primary-glow hover:to-accent disabled:opacity-50 disabled:cursor-not-allowed text-primary-foreground font-bold py-4 px-8 rounded-xl transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-glow)] hover:-translate-y-1 transform"
               >
                 {loading ? "Generating..." : "Generate Roadmap"}
               </button>

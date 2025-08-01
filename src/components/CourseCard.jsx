@@ -29,7 +29,7 @@ const CourseCard = ({ title, partner, rating, description, duration, level, cate
   };
 
   return (
-    <div className="bg-card rounded-xl p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-glow)] transition-[var(--transition-smooth)] hover:-translate-y-1 border border-border/50">
+    <div className="bg-card rounded-xl p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-float)] transition-[var(--transition-smooth)] hover:-translate-y-2 border border-border/50 backdrop-blur-sm">
       <div className="flex items-center justify-between mb-4">
         <span className="px-3 py-1 bg-primary/10 text-primary text-xs font-medium rounded-full">
           {category}
@@ -69,7 +69,7 @@ const CourseCard = ({ title, partner, rating, description, duration, level, cate
       </div>
 
       <button
-        className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)]"
+        className="w-full bg-primary hover:bg-primary-glow text-primary-foreground font-semibold py-3 px-4 rounded-lg transition-[var(--transition-smooth)] hover:shadow-[var(--shadow-elegant)] hover:-translate-y-0.5 transform"
         aria-label={`View course: ${title}`}
       >
         View Course
